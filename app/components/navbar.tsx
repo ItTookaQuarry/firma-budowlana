@@ -31,6 +31,7 @@ export default function Naw() {
 
   return (
     <Navbar
+    disableAnimation={true}
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
       height="10vh"

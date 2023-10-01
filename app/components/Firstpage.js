@@ -14,10 +14,10 @@ export default function Firstpage() {
 
 
   return (
-    <><ImgComp src={'IMG-20230914-WA0142_shxzzf'}/>
-<div class="grid grid h-screen w-sreen overflow-hidden relative" >
+    <>
+<div class="grid grid h-screen w-sreen overflow-hidden relative border-b-2 border-neutral-200" >
 
-
+<ImgComp src={'IMG-20230914-WA0142_shxzzf'}/>
 <div
                 className="inline-block   m-auto relative max-w-lg text-center justify-center p-5 lg:p-10 backdrop-brightness-50"
                 style={{

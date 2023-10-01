@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 export default function Footer() {
   return (
+<>
+    
     <footer
       class="bg-neutral-100 text-center text-neutral-600 dark:text-neutral-200 lg:text-left"
       style={{ backgroundColor: "black", bottom: "0" }}
@@ -163,6 +165,6 @@ export default function Footer() {
         <span>© 2023 </span>
 
       </div> }
-    </footer>
+    </footer></>
   );
 }

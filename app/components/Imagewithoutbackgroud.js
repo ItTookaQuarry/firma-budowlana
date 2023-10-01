@@ -6,9 +6,8 @@ import React from 'react'
 export default function ImgComp(props) {
   return (
     <CldImage
-width={"500"}
-height="400"
-class=""
+width={"800"}
+height="500"
 src={props.src}
 removeBackground
 alt="Zdjęcie z budowsy"
