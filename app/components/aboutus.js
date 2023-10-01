@@ -2,14 +2,16 @@ import React from "react";
 import Image from "next/image";
 import zdjecie9 from "public/zdjecie1.jpg";
 import { subtitle, title } from "./primitives";
-
+import ImgComp from "@/app/components/Imagecomponent";
 import Link from "next/link";
 
 export default function Aboutus() {
   return (
     <>
-    <br id="aboutus"></br>
-      <div className=" max-w-lg text-center justify-center m-auto  col-span-full lg:col-start-1 lg:col-span-2 m-auto">
+
+    <div class="grid grid-cols-4 gap-y-1 h-screen w-sreen overflow-hidden relative" id="aboutus"> 
+       <ImgComp src={'IMG-20230914-WA0140_3_birgir'}/>
+      <div className=" max-w-lg text-center justify-center m-auto  col-span-full m-auto relative  backdrop-brightness-50">
         {" "}
         <section>
           <div>
@@ -29,53 +31,51 @@ export default function Aboutus() {
             <div>
               <br></br>
             </div>
-            <button class="bg-white relative w-[150px] m-auto hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-              <Link href={"Onas"}> Czytaj więcej</Link>
-            </button>
+            <Link href="#aboutus" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  relative">
+Zob
+    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+  </svg>
+</Link>
           </div>
         </section>{" "}
       </div>
+</div>
 
-      <div
-        className="max-w-[600px] 
-      
-      
-      col-span-full
-      
-      gap-3 grid col-span-full relative  px-8 m-auto lg:col-start-3 lg:col-span-2"
-      >
-        <div class="h-[300px] col-span-12  md:h-[400px]  lg:h-[600px] flex relative">
-          <div
-            className="inline-block max-w-lg text-center justify-center p-2 lg:p-10 relative z-20"
-            style={{
-              display: "grid",
-              gridColumn: "2/3",
-              gridRow: "1/2",
-              margin: "auto",
-            }}
-          >
-            <h1 className={title({})} style={{ position: "relative" }}>
-              Solidność i Skuteczność
-            </h1>
-            <br></br>
-            <h1
-              className={title({})}
-              style={{ position: "relative" }}
-            ></h1>{" "}
-            <br></br>
-            <h1 className={title({})} style={{ position: "relative" }}>
-              Zaufanie i Wydajność
-            </h1>{" "}
-            <br></br>
-            <br></br>
+
+<div class="grid grid-cols-4 gap-y-1 h-screen w-sreen overflow-hidden relative" id="aboutus"> 
+       <ImgComp src={'IMG-20230914-WA0125_2_w18mrg'}/>
+      <div className=" max-w-lg text-center justify-center m-auto  col-span-full m-auto relative  backdrop-brightness-50">
+        {" "}
+        <section>
+          <div>
+            <div>
+              <br></br>
+            </div>
+            <strong>
+              <p style={{ color: "white" }} class="lg:text-lg col">
+                To firma, która istnieje na rynku już od 2015 roku.
+                Współpracowaliśmy z najlepszymi architektami w Londynie.
+                Zrealizowaliśmy wiele projektów mieszkaniowych i komercyjnych
+                zarówno w Wielkiej Brytanii, jak i za granicą i jesteśmy dumni z
+                zadowolenia klientów
+              </p>
+            </strong>
+            <div>
+              <br></br>
+            </div>
+            <Link href="#aboutus" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  relative">
+Zobacz Naszą oferte
+    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+  </svg>
+</Link>
           </div>
-          <Image src={zdjecie9} fill class="z-0 brightness-50" />
-          <button class="bg-white relative  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-            Zobacz naszą ofertę
-          </button>
-        </div>{" "}
-        <br class="lg:hidden"></br>
+        </section>{" "}
       </div>
+</div>
+
+      
     </>
   );
 }

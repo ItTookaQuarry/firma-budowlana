@@ -46,8 +46,7 @@ Zobacz więcej
 
 
 </div>
-  <br class="hidden lg:block"></br>
-  <div class="grid grid-cols-4 gap-y-1 h-screen w-sreen overflow-hidden relative">   <Aboutus /></div>
+   <Aboutus />
 
  
       
