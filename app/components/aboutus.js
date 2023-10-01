@@ -6,7 +6,7 @@ import Image from "next/image";
 import zdjecie9 from "public/zdjecie1.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { subtitle, title } from "./primitives";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
+
 
 import Link from "next/link";
 
@@ -63,7 +63,7 @@ export default  function Aboutus() {
       
       gap-3 grid col-span-full relative  px-8 m-auto lg:col-start-3 lg:col-span-2"
       >
-        <Card className="h-[300px] col-span-12  md:h-[400px]  lg:h-[600px] flex relative">
+        <div class="h-[300px] col-span-12  md:h-[400px]  lg:h-[600px] flex relative">
           <div
             className="inline-block max-w-lg text-center justify-center p-2 lg:p-10 relative z-20"
             style={{
@@ -92,7 +92,7 @@ export default  function Aboutus() {
           <button class="bg-white relative  hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
             Zobacz naszą ofertę
           </button>
-        </Card>{" "}
+        </div>{" "}
         <br class="lg:hidden"></br>
       </motion.div>
     </>
