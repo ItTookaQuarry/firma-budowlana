@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-
+import { CldImage } from "next-cloudinary";
+import ImgComp from "@/app/components/Imagecomponent";
 import { subtitle, title } from "../components/primitives";
 import {AiFillCheckCircle} from "react-icons/ai";
 import { motion, useAnimation } from "framer-motion";
@@ -59,10 +60,10 @@ export default function Page() {
     "font-extra bold leading-none tracking-tight md:text-5xl lg:text-6xl dark";
 
   const div1clas =
-    "h-auto col-start-1 font-bold col-span-4 lg:col-start-2 lg:col-span-1 ";
+    "h-auto col-start-1 font-bold col-span-4 lg:col-start-2 lg:col-span-1 backdrop-brightness-50";
 
   const div2clas =
-    "h-auto  col-start-1 font-bold col-span-4 rounded   lg:col-start-3 lg:col-span-1 ";
+    "h-auto  col-start-1 font-bold col-span-4 rounded   lg:col-start-3 lg:col-span-1 backdrop-brightness-50 ";
 
   const tableofreasons = [
     "Doskonałość i pasja w każdym projekcie.",
@@ -74,14 +75,26 @@ export default function Page() {
   ];
 
   return (
-    <div class="gap-x-5 gap-y-5 grid grid-cols-4 relative lg:gap-y-10 lg:gap-x-10">
-     
-      <div class="col-start-1 col-span-4 lg:col-start-1 lg:col-span-1 m-auto">
+    <div class="gap-x-5 gap-y-5 grid grid-cols-4 relative lg:gap-y-10 lg:gap-x-10 backdrop-brightness-50" >
+  
+
+
+      <CldImage
+width={"2000"} 
+height="2000"
+class=" object-cover h-full  lg:w-full lg:h-full absolute"
+src={"IMG-20230914-WA0141_1_niazwg"}
+fillBackground
+
+alt="Zdjęcie z budowsy"
+/>
+      <br></br>
+      <div class="col-start-1 col-span-4  m-auto backdrop-brightness-50">
         <h1 class={`${title2}  col-start-1 col-span-4 m-auto font-bold
-mb-4 text-4xl`}>Logo</h1>
+mb-4 text-4xl relative backdrop-brightness-50`}>Logo</h1>
       </div>
 
-      <div class="col-start-1 col-span-4 lg:col-start-2 lg:col-span-2 m-auto px-14 text-center lg:text-left">
+      <div class="col-span-full col-start-1 lg:col-start-2 lg:col-span-2  m-auto px-14 text-center  relative backdrop-brightness-50 w-5/6">
         <h1
           className={subtitle({ class: "mt-4 lg:mt-8" })}
           style={{ color: "white",fontWeight:"bold" }}
@@ -112,11 +125,11 @@ mb-4 text-4xl  font-bold ${title2}`}
               visible: { opacity: 1, scale: 1 },
               hidden: { opacity: 0, scale: 0 },
             }}
-            class={`${classs} "bg-white relative w-[250px] m-auto  text-gray-800 font-semibold py-2 px-4 border  border-solid rounded shadow">"`}
+            class={`${classs} "bg-white relative w-[250px] m-auto  text-gray-800 font-semibold py-2 px-4 border  border-solid rounded shadow "`}
             key={index}
           >
             {" "}
-            <p
+            <p 
               class="m-auto text-white text-center justify-center "
               ref={refs[index]}
             >

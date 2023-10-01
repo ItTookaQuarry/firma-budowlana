@@ -7,7 +7,7 @@ export default function ImgComp(props) {
   return (
     <CldImage
 width={"2100"} 
-height="1200"
+height="1400"
 class=" object-cover h-full  lg:w-full lg:h-full absolute"
 src={props.src}
 fillBackground
