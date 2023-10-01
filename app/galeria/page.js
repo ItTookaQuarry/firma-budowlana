@@ -1,5 +1,4 @@
-"use client";
-import { Button } from "@nextui-org/button";
+
 import React from "react";
 import zdjecie1 from "public/zdjecie1.jpg";
 

@@ -1,10 +1,8 @@
-"use client";
+
 
 import React from "react";
-import { Button } from "@nextui-org/button";
 import Image from "next/image";
 import zdjecie9 from "public/zdjecie1.jpg";
-import { motion, useAnimation } from "framer-motion";
 import { subtitle, title } from "./primitives";
 
 
@@ -14,14 +12,8 @@ export default  function Aboutus() {
   return (
     <>
       <br id="aboutus"></br>
-      <motion.div
-        initial="visible"
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0 },
-        }}
-        class="col-span-full p-8 lg:col-start-1 lg:col-span-2"
-        id="aboutus"
+      <div
+   
       >
         {" "}
         <br></br>
@@ -48,9 +40,9 @@ export default  function Aboutus() {
             </button>
           </div>
         </section>{" "}
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         initial="visible"
         variants={{
           visible: { opacity: 1, scale: 1 },
@@ -94,7 +86,7 @@ export default  function Aboutus() {
           </button>
         </div>{" "}
         <br class="lg:hidden"></br>
-      </motion.div>
+      </div>
     </>
   );
 }

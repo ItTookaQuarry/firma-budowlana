@@ -1,12 +1,7 @@
-"use client";
+
 import Aboutus from "@/app/components/aboutus";
 import React from "react";
-
-
-import { CldImage } from 'next-cloudinary';
-
-
-import Link from "next/link";
+import ImgComp from "@/app/components/Imagecomponent";
 
 export default function Firstpage() {
 
@@ -19,23 +14,9 @@ export default function Firstpage() {
 
 
   return (
-    <>
+    <><ImgComp/>
 <div class="grid grid h-screen w-sreen overflow-hidden relative" >
-<CldImage
-width={"2100"}
-height="1200"
-class=" object-cover h-full  lg:w-full lg:h-full absolute"
-src='IMG-20230914-WA0142_shxzzf'
-fillBackground
 
-alt="Zdjęcie z budowsy"
-
-
-
-
-
-
-/>
 
 <div
                 className="inline-block   m-auto relative max-w-lg text-center justify-center p-5 lg:p-10 backdrop-brightness-50"
