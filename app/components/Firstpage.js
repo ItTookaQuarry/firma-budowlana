@@ -14,7 +14,7 @@ export default function Firstpage() {
 
 
   return (
-    <><ImgComp/>
+    <><ImgComp src={'IMG-20230914-WA0142_shxzzf'}/>
 <div class="grid grid h-screen w-sreen overflow-hidden relative" >
 
 
@@ -47,7 +47,7 @@ Zobacz więcej
 
 </div>
   <br class="hidden lg:block"></br>
-  <div class="grid grid-cols-4">   <Aboutus /></div>
+  <div class="grid grid-cols-4 gap-y-1 h-screen w-sreen overflow-hidden relative">   <Aboutus /></div>
 
  
       

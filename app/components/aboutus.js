@@ -1,30 +1,24 @@
-
-
 import React from "react";
 import Image from "next/image";
 import zdjecie9 from "public/zdjecie1.jpg";
 import { subtitle, title } from "./primitives";
 
-
 import Link from "next/link";
 
-export default  function Aboutus() {
+export default function Aboutus() {
   return (
     <>
-      <br id="aboutus"></br>
-      <div
-   
-      >
+    <br id="aboutus"></br>
+      <div className=" max-w-lg text-center justify-center m-auto  col-span-full lg:col-start-1 lg:col-span-2 m-auto">
         {" "}
-        <br></br>
         <section>
-          <div className=" max-w-lg text-center justify-center m-auto">
+          <div>
             <h1 className={title()}> Nazwa</h1>
             <div>
               <br></br>
             </div>
             <strong>
-              <p style={{ color: "white" }} class="lg:text-lg ">
+              <p style={{ color: "white" }} class="lg:text-lg col">
                 To firma, która istnieje na rynku już od 2015 roku.
                 Współpracowaliśmy z najlepszymi architektami w Londynie.
                 Zrealizowaliśmy wiele projektów mieszkaniowych i komercyjnych
@@ -43,11 +37,6 @@ export default  function Aboutus() {
       </div>
 
       <div
-        initial="visible"
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0 },
-        }}
         className="max-w-[600px] 
       
       
