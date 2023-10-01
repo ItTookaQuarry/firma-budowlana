@@ -6,7 +6,7 @@ import Image from "next/image";
 import zdjecie9 from "public/zdjecie1.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { subtitle, title } from "./primitives";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
 
 import Link from "next/link";
 
