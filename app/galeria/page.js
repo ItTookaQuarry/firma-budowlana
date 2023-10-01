@@ -1,5 +1,4 @@
 "use client";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Button } from "@nextui-org/button";
 import React from "react";
 import zdjecie1 from "public/zdjecie1.jpg";
@@ -37,40 +36,40 @@ export default function page() {
         >
       {table.map((each,index)=>{
         if(each.span===1){
-          return (<Card className="col-span-12 sm:col-span-4 h-[300px]" key={index}>
+          return (<div class="col-span-12 sm:col-span-4 h-[300px]" key={index}>
           <Image
             removeWrapper
             alt="Card background"
-            className="z-0 w-full h-full object-cover"
+            className="z-0 w-full h-full object-cover rounded-lg"
             src={zdjecie1}
           />
-        </Card>)
+        </div>)
         }
         if(each.span===2){
-          return (    <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-8" key={index} >
+          return (    <div  class="w-full h-[300px] col-span-12 sm:col-span-8" key={index} >
  
           <Image
             removeWrapper
             alt="Relaxing app background"
-            className="z-0 w-full h-full object-cover"
+            className="z-0 w-full h-full object-cover rounded-lg"
             src={zdjecie1}
             style={{margin:"auto"}}
           />
     
-        </Card>)
+        </div>)
         }
         if(each.span===3){
-          return (    <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-12" key={index}>
+          return (    <div  class="w-full h-[300px] col-span-12 sm:col-span-12 rounded-lg" key={index}>
  
           <Image
             removeWrapper
             alt="Relaxing app background"
-            className="z-0 w-full h-full object-cover"
+            class="z-0 w-full h-full object-cover rounded-lg"
             src={zdjecie1}
             style={{margin:"auto"}}
           />
     
-        </Card>)
+        </div>)
         }
       })}
       
