@@ -4,13 +4,13 @@ import { CldImage } from 'next-cloudinary';
 export default function Imageaboutus(props) {
   return (
     <CldImage
-    width={"2000"} 
-    height="1400"
-    class="  h-full   absolute object-cover"
+    width={props.width} 
+    height={props.height}
+    class={props.class}
     src={props.src}
-    fillBackground
+    fillBackground={{gravity:`${props.gravity}`}}
     
     alt="Zdjęcie z budowy"
     />
-  )
+  ) 
 }

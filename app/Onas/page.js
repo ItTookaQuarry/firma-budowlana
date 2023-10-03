@@ -1,10 +1,61 @@
+"use client";
 import React from "react";
-import ImgComp from "@/app/components/Imageaboutus";
+import { CldImage } from "next-cloudinary";
+import ImgComp from "@/app/components/Imagecomponent";
 import { subtitle, title } from "../components/primitives";
 import {AiFillCheckCircle} from "react-icons/ai";
-
+import { motion, useAnimation } from "framer-motion";
+import { InView, useInView } from "react-intersection-observer";
+import Image from "next/image";
 export default function Page() {
-  
+  const [ref, inView] = useInView();
+  const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
+  const [ref4, inView4] = useInView();
+  const [ref5, inView5] = useInView();
+  const [ref6, inView6] = useInView();
+  const control = useAnimation();
+  const control2 = useAnimation();
+  const control3 = useAnimation();
+  const control4 = useAnimation();
+  const control5 = useAnimation();
+  const control6 = useAnimation();
+
+  React.useEffect(() => {
+    inView ? control.start("visible") : control.start("hidden");
+  }, [control, inView]);
+
+  React.useEffect(() => {
+    inView2 ? control2.start("visible") : control2.start("hidden");
+  }, [control2, inView2]);
+
+  React.useEffect(() => {
+    inView3 ? control3.start("visible") : control3.start("hidden");
+  }, [control3, inView3]);
+
+  React.useEffect(() => {
+    inView4 ? control4.start("visible") : control4.start("hidden");
+  }, [control4, inView4]);
+
+
+
+  React.useEffect(() => {
+    inView5 ? control5.start("visible") : control5.start("hidden");
+  }, [control5, inView5]);
+
+
+  React.useEffect(() => {
+    inView5 ? control5.start("visible") : control5.start("hidden");
+  }, [control5, inView5]);
+
+  React.useEffect(() => {
+    inView6 ? control6.start("visible") : control6.start("hidden");
+  }, [control6, inView6]);
+
+  let refs = [ref, ref2, ref3, ref4, ref5, ref6];
+
+  let controls = [control, control2, control3, control4, control5, control6];
+
   const title2 =
     "font-extra bold leading-none tracking-tight md:text-5xl lg:text-6xl dark";
 
@@ -25,9 +76,9 @@ export default function Page() {
 
   return (
     <div class="gap-x-5 gap-y-5 grid grid-cols-4 relative lg:gap-y-10 lg:gap-x-10 backdrop-brightness-50" >
-  
+   
 
-<ImgComp src={"IMG-20230914-WA0146_1_r1erkj"}/>
+
 
       <br></br>
       <div class="col-start-1 col-span-4  m-auto backdrop-brightness-50">
@@ -58,26 +109,29 @@ mb-4 text-4xl  font-bold ${title2}`}
         const classs = (index + 1) % 2 == 0 ? div2clas : div1clas;
 
         return (
-          <div
+          <motion.div
     
-          
+            initial="hidden"
+            animate={controls[index]}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
             class={`${classs} "bg-white relative w-[250px] m-auto  text-gray-800 font-semibold py-2 px-4 border  border-solid rounded shadow "`}
             key={index}
           >
             {" "}
             <p 
               class="m-auto text-white text-center justify-center "
-   
+              ref={refs[index]}
             >
               {" "}
               {each}
             </p>
             <AiFillCheckCircle class="m-auto text-6xl text-white" />
-          </div>
+          </motion.div>
         );
       })}
-
-      
     </div>
   );
 }

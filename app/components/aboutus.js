@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import zdjecie9 from "public/zdjecie1.jpg";
-import { subtitle, title } from "./primitives";
+
 import ImgComp from "@/app/components/Imagecomponent";
 import Link from "next/link";
 import ImgComp2 from "@/app/components/Imagewithoutbackgroud";
+import ImgComp3 from "@/app/components/Imageaboutus";
+
 export default function Aboutus() {
   return (
     <>
@@ -13,7 +14,17 @@ export default function Aboutus() {
         class="h-[450px] grid grid-cols-4 gap-y-1 lg:h-screen lg:w-sreen  md:h-screen md:w-screen relative border-b-2 border-neutral-200"
         id="aboutus"
       >
-        <ImgComp src={"IMG-20230914-WA0125_2_w18mrg"} />
+      
+  <ImgComp
+          src={"IMG-20230914-WA0142_shxzzf"}
+          class={
+            " object-cover lg: h-full l lg:w-full lg:h-full absolute lg:block md:block object-left"
+            
+          }
+       
+          
+        />
+
 
         <div className="px-10 max-w-lg text-center justify-center m-auto  col-span-full    row-span-full relative  backdrop-brightness-50 text-lg lg:px-20">
           {" "}
