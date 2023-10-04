@@ -12,7 +12,7 @@ export default function Firstpage() {
 <ImgComp
           src={"IMG-20230914-WA0075_2_yulrxa"}
           class={
-            "hidden  object-cover lg: h-full l lg:w-full lg:h-full absolute lg:block md:block object-left"
+            "hidden  object-cover lg: h-full  lg:w-full lg:h-full absolute lg:block md:block object-left"
             
           }
        
@@ -23,7 +23,7 @@ height="1200"
 <ImgComp
           src={"IMG-20230914-WA0142_1_twbfne"}
           class={
-            "object-cover lg:hidden md:hidden h-full w-full absolute lg:block md:block object-left"
+            "object-cover lg:hidden md:hidden h-full w-full absolute object-left"
             
           }
 
