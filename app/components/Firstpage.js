@@ -6,11 +6,31 @@ export default function Firstpage() {
   return (
     <>
       <div class="grid grid h-screen w-sreen relative border-b-2 border-neutral-200 ">
-      <ImgComp3 src={"IMG-20230914-WA0125_2_w18mrg"} 
-        class={"object-cover lg: h-full  lg:w-full lg:h-full absolute lg:block md:block "}
-        width={"2600"} 
-        height="1200"
-        gravity={"north"}
+ 
+
+
+<ImgComp
+          src={"IMG-20230914-WA0075_2_yulrxa"}
+          class={
+            "hidden  object-cover lg: h-full l lg:w-full lg:h-full absolute lg:block md:block object-left"
+            
+          }
+       
+          width={"2600"} 
+height="1200"
+        />
+
+<ImgComp
+          src={"IMG-20230914-WA0142_1_twbfne"}
+          class={
+            "object-cover lg:hidden md:hidden h-full w-full absolute lg:block md:block object-left"
+            
+          }
+
+          width={"2300"} 
+          height="1040"
+       
+          
         />
 
         <div

@@ -6,11 +6,11 @@ import React from 'react'
 export default function ImgComp(props) {
   return (
     <CldImage
-width={"2200"} 
-height="1000"
+width={props.width} 
+height={props.height}
 class={props.class}
 src={props.src}
-fillBackground={{gravity:"north_west"}}
+fillBackground={{gravity:"west"}}
 
 alt="Zdjęcie z budowsy"
 />

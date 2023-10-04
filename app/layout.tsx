@@ -8,7 +8,7 @@ import Naw  from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-
+import { Inter } from 'next/font/google'
 export const metadata: Metadata = {
 	title: {
 		default: siteConfig.name,
@@ -26,13 +26,17 @@ export const metadata: Metadata = {
 	},
 };
 
+
+
+   
+
 export default function RootLayout({
 	children,
 }: {
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning className="scroll-smooth">
+		<html lang="en" suppressHydrationWarning className="scroll-smooth focus:scroll-auto" >
 			<head />
 			<body
 				className={clsx(

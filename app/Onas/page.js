@@ -81,14 +81,13 @@ export default function Page() {
 
 
       <br></br>
-      <div class="col-start-1 col-span-4  m-auto backdrop-brightness-50">
+      <div class="col-span-full lg:col-start-1 lg:col-span-2 m-auto backdrop-brightness-50">
         <h1 class={`${title2}  col-start-1 col-span-4 m-auto font-bold
 mb-4 text-4xl relative backdrop-brightness-50`}>Logo</h1>
       </div>
 
-      <div class="col-span-full col-start-1 lg:col-start-2 lg:col-span-2  m-auto px-14 text-center  relative backdrop-brightness-50 w-5/6">
+      <div class="col-span-full  lg:col-start-2 lg:col-span-2 pr-10 lg:m-auto  pl-4  relative backdrop-brightness-50 w-5/6">
         <h1
-          className={subtitle({ class: "mt-4 lg:mt-8" })}
           style={{ color: "white",fontWeight:"bold" }}
         >
           To firma, która istnieje na rynku już od 2015 roku. Współpracowaliśmy
@@ -99,8 +98,8 @@ mb-4 text-4xl relative backdrop-brightness-50`}>Logo</h1>
       </div>
 
       <div
-        class={`lg:col-start2 lg:col-span2 col-start-1 col-span-4 m-auto
-mb-4 text-4xl  font-bold ${title2}`}
+        class={` col-span-full pl-4 
+mb-4 text-4xl  font-bold  lg:m-auto  ${title2}`}
       >
         Dlaczego my?
       </div>

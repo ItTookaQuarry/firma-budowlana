@@ -15,16 +15,12 @@ export default function Aboutus() {
         id="aboutus"
       >
       
-  <ImgComp
-          src={"IMG-20230914-WA0142_shxzzf"}
-          class={
-            " object-cover lg: h-full l lg:w-full lg:h-full absolute lg:block md:block object-left"
-            
-          }
-       
-          
+      <ImgComp3 src={"IMG-20230914-WA0125_3_maolg9"} 
+        class={"object-cover lg: h-full  lg:w-full lg:h-full absolute lg:block md:block "}
+        width={"2600"} 
+        height="1200"
+        gravity={"north"}
         />
-
 
         <div className="px-10 max-w-lg text-center justify-center m-auto  col-span-full    row-span-full relative  backdrop-brightness-50 text-lg lg:px-20">
           {" "}
@@ -38,8 +34,7 @@ export default function Aboutus() {
                  jesteśmy firmą która istnieje na rynku już od 2015 roku.
                   Współpracowaliśmy z najlepszymi architektami w Londynie.
                   Zrealizowaliśmy wiele projektów mieszkaniowych i komercyjnych
-                  zarówno w Wielkiej Brytanii, jak i za granicą i jesteśmy dumni
-                  z zadowolenia klientów
+                  w Wielkiej Brytanii  i wielu innych miejscach  w Europie.
                 </p>
               </strong>
               <div>
@@ -75,7 +70,7 @@ export default function Aboutus() {
     
        <div class="grid   lg:h-auto lg:w-auto md:h-auto md:w-auto grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500">
         <div class="col-span-full  row-span-full justify-self-end " >
-          <ImgComp2 src={"building-2762318_1280_tex4lo"} />
+          <ImgComp2 src={"building-2762318_1280_ehrxmm"} />
         </div>
 
         <div className=" max-w-lg text-center justify-center m-auto  col-span-full  m-auto   row-span-full m-auto relative  backdrop-brightness-50 text-lg lg:block px-20">
