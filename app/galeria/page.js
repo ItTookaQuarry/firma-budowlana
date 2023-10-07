@@ -42,9 +42,10 @@ if(each.tags[0]==="0.5"){
 
 
 
-<div class={`col-span-12 ${columnsingrid} h-[300px]`} >
+<div class={`col-span-12 ${columnsingrid} h-[300px]`} 
+key={index}>
 <ImgComp 
-key={index}
+
 srcc={each.public_id}
 width={each.width}
 height={each.height}
