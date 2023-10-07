@@ -6,12 +6,13 @@ import React from 'react'
 export default function ImgComp(props) {
   return (
     <CldImage
-width={"800"}
-height="500"
+width={"1200"}
+height="700"
 src={props.src}
 removeBackground
 alt="Zdjęcie z budowsy"
-
+class="absolute h-full "
+ 
 
 gravity="north_west"
 

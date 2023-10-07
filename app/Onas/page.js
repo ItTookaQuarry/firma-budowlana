@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import { CldImage } from "next-cloudinary";
-import ImgComp from "@/app/components/Imagecomponent";
-import { subtitle, title } from "../components/primitives";
-import {AiFillCheckCircle} from "react-icons/ai";
+
+import ImgComp from "@/app/(components)/Imagecomponent";
+import Balancer from "react-wrap-balancer";
+import ImgComp2 from "@/app/(components)/Imagewithoutbackgroud";
+import { AiFillCheckCircle } from "react-icons/ai";
 import { motion, useAnimation } from "framer-motion";
 import { InView, useInView } from "react-intersection-observer";
-import Image from "next/image";
+
 export default function Page() {
   const [ref, inView] = useInView();
   const [ref2, inView2] = useInView();
@@ -37,12 +38,9 @@ export default function Page() {
     inView4 ? control4.start("visible") : control4.start("hidden");
   }, [control4, inView4]);
 
-
-
   React.useEffect(() => {
     inView5 ? control5.start("visible") : control5.start("hidden");
   }, [control5, inView5]);
-
 
   React.useEffect(() => {
     inView5 ? control5.start("visible") : control5.start("hidden");
@@ -75,25 +73,25 @@ export default function Page() {
   ];
 
   return (
-    <div class="gap-x-5 gap-y-5 grid grid-cols-4 relative lg:gap-y-10 lg:gap-x-10 backdrop-brightness-50" >
-   
-
-
+    <div class="gap-x-5 gap-y-5 grid grid-cols-4 relative lg:gap-y-10 lg:gap-x-10 backdrop-brightness-50">
+  
 
       <br></br>
       <div class="col-span-full lg:col-start-1 lg:col-span-2 m-auto backdrop-brightness-50">
-        <h1 class={`${title2}  col-start-1 col-span-4 m-auto font-bold
-mb-4 text-4xl relative backdrop-brightness-50`}>Logo</h1>
+        <h1
+          class={`${title2}  col-start-1 col-span-4 m-auto font-bold
+mb-4 text-4xl relative backdrop-brightness-50`}
+        >
+          Logo
+        </h1>
       </div>
 
-      <div class="col-span-full  lg:col-start-2 lg:col-span-2 pr-10 lg:m-auto  pl-4  relative backdrop-brightness-50 w-5/6">
-        <h1
-          style={{ color: "white",fontWeight:"bold" }}
-        >
-          To firma, która istnieje na rynku już od 2015 roku. Współpracowaliśmy
-          z najlepszymi architektami w Londynie. Zrealizowaliśmy wiele projektów
-          mieszkaniowych i komercyjnych zarówno w Wielkiej Brytanii, jak i za
-          granicą i jesteśmy dumni z zadowolenia klientów
+      <div class="col-span-full  lg:col-start-2 lg:col-span-2   pl-10 relative backdrop-brightness-50 w-5/6">
+        <h1 style={{ color: "white", fontWeight: "bold" }}>
+          To firma która istnieje na rynku już od 2015 roku. Współpracowaliśmy z
+          najlepszymi architektami w Londynie. Zrealizowaliśmy wiele projektów
+          mieszkaniowych i komercyjnych w Wielkiej Brytanii i wielu innych
+          miejscach w Europie.
         </h1>
       </div>
 
@@ -109,7 +107,6 @@ mb-4 text-4xl  font-bold  lg:m-auto  ${title2}`}
 
         return (
           <motion.div
-    
             initial="hidden"
             animate={controls[index]}
             variants={{
@@ -120,7 +117,7 @@ mb-4 text-4xl  font-bold  lg:m-auto  ${title2}`}
             key={index}
           >
             {" "}
-            <p 
+            <p
               class="m-auto text-white text-center justify-center "
               ref={refs[index]}
             >
@@ -131,6 +128,45 @@ mb-4 text-4xl  font-bold  lg:m-auto  ${title2}`}
           </motion.div>
         );
       })}
+
+      <br></br>
+      <div
+        class={` col-span-full pl-4 
+mb-4 text-4xl m-auto font-bold  lg:m-auto  ${title2}`}
+      >
+        O nas
+      </div>
+
+      {/* <div class=" col-span-full    relative backdrop-brightness-50 ">
+        <h1 style={{ color: "white", fontWeight: "bold" }}>
+          <Balancer>
+            To co nas wyróżnia, to nie tylko długoletnie doświadczenie, ale
+            także nasza zdolność do dostarczania niezwykłych rozwiązań dla
+            klientów na całym kontynencie. Współpracując z renomowanymi markami,
+            takimi jak Pokemon i Starbucks, dostarczyliśmy nie tylko produkty
+            wysokiej jakości, ale także tworzyliśmy unikalne przestrzenie, które
+            zachwycają zarówno klientów, jak i ich gości. Nasze wykończenia
+            mikrocementem i żywicą poliuretanową są nie tylko trwałe, ale także
+            kreatywne, co pozwala nam tworzyć dzieła sztuki na każdej
+            powierzchni. Choć nasza historia rozpoczęła się w Londynie, nasza
+            działalność rozprzestrzeniła się na teren całej Europy. Pracowaliśmy
+            w różnych krajach, takich jak Austria, malownicze tereny Walii,
+            pełne energii Anglii oraz magiczna Szkocja. To doświadczenie
+            pozwoliło nam zrozumieć różnorodność kulturową i spełniać różnorodne
+            potrzeby naszych klientów. Nasz zespół to grupa pasjonatów, którzy
+            nieustannie dążą do doskonałości. Śledzimy najnowsze trendy w branży
+            i rozwijamy nasze umiejętności, aby zawsze oferować rozwiązania,
+            które są trwałe i modne. Naszą misją jest tworzenie trwałych i
+            unikalnych przestrzeni, a każda powierzchnia jest dla nas płótnem,
+            na którym tworzymy dzieła sztuki. Jeśli jesteś zainteresowany
+            współpracą z nami lub chciałbyś dowiedzieć się więcej o naszych
+            usługach, serdecznie zapraszamy do kontaktu. Razem możemy stworzyć
+            przestrzenie, które zachwycą i będą trwałe przez wiele lat.
+            Dziękujemy za zaufanie, które nam oferujesz, i zapraszamy do
+            poznania nas bliżej!
+          </Balancer>
+        </h1>
+      </div> */}
     </div>
   );
 }

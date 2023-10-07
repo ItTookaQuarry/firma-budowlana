@@ -2,8 +2,8 @@
 import React from "react";
 import { Button } from "@nextui-org/button";
 import { Textarea, Input } from "@nextui-org/input";
-import { myAction } from "../components/actions";
-import { subtitle} from "../components/primitives";
+import { myAction } from "../(components)/actions";
+import { subtitle} from "../(components)/primitives";
 
 export default function App() {
   return (

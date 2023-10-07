@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
-import Naw  from "@/app/components/navbar";
-
-import Footer from "@/app/components/footer";
+import Naw  from "@/app/(components)/navbar";
+import './global.css'
+import Footer from "@/app/(components)/footer";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { Inter } from 'next/font/google'
@@ -46,8 +46,9 @@ export default function RootLayout({
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 
-						<Naw/>
-						<main style={{scrollBehavior:"smooth"}}>
+					
+						<main style={{scrollBehavior:"smooth"}} >
+						<Naw />
 							{children}
 						</main>
 					<Footer/>

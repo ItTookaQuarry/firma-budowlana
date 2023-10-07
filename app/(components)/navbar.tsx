@@ -1,6 +1,6 @@
 "use client";
-
-import { title, subtitle } from "@/app/components/primitives";
+import { usePathname } from 'next/navigation'
+import { useWindowScroll } from "@uidotdev/usehooks";
 import React from "react";
 import Link from "next/link";
 import {
@@ -12,14 +12,35 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import Image from "next/image";
-import zdjecie2 from "public/zdjecie4.jpg";
-import zdjecie1 from "public/zdjecie1.jpg";
-import { motion } from "framer-motion";
-import { time } from "console";
+
 
 export default function Naw() {
+
+  const [{ x, y }, scrollTo] = useWindowScroll();
+
+
+const navbgone= "text-xl  lg:bg-gradient-to-r from-stone-50 to-stone-950 md:bg-gradient-to-r"
+const navbgtwo= "text-xl"
+const classone="lg:text-xl text-lg text-white m-auto  lg:px-5 lg:py-3 md:px-5  md:py-3 text-base font-medium text-center  bg-black text-white rounded-lg lg:hover:bg-white lg:hover:text-black focus:ring-4 focus:ring-black relative"
+const classtwo= "text-xl text-white  "
+const pathname = usePathname()
+let  navclass= pathname === "/" ? navbgone : navbgtwo
+
+navclass = y===0 ? navclass : "text-lg bg-transparent backdrop-brightness-50 text-white"
+
+const navelementclass = navclass !== navbgone ? classtwo : classone
+
+const nazwafirmy = navclass === navbgone ? "text-xl text-white m-auto  px-5 py-3 text-base font-medium text-center  bg-black text-white rounded-lg  relative" : classtwo
+
+
+
+
+
+
+
+
+
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -30,45 +51,50 @@ export default function Naw() {
   ];
 
   return (
+
     <Navbar
+className={navclass}
+
     disableAnimation={true}
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
       height="10vh"
+style={{width:"100vw"}}
     >
-      <NavbarContent>
+      <NavbarContent className="">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className={`sm:hidden lg:hidden ${navelementclass}`}
         />
         <NavbarBrand>
-          <p className={subtitle()}>Nazwa firmy</p>
+          <h1 className={nazwafirmy}>Nazwa firmy</h1>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-9" justify="end">
         <NavbarItem>
-          <Link className={subtitle()} href="galeria">
+          <Link className={navelementclass} href="galeria">
             Galeria
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="Onas" className={subtitle()}>
+          <Link color="foreground" href="Onas" className={navelementclass}>
             O nas
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="/" className={subtitle()}>
+          <Link  href="/" className={navelementclass}>
        Strona główna 
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="pytanie" className={subtitle()}>
+          <Link color="foreground" href="pytanie" className={navelementclass}>
             Kontakt
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end"></NavbarContent>
-      <NavbarMenu style={{display:"flex",rowGap:"20px"}}>
+      <NavbarMenu  >
+        <br></br>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`} >
             <Link
@@ -204,6 +230,8 @@ export default function Naw() {
               
     
       </NavbarMenu>
-    </Navbar>
+    </Navbar> 
+
+
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Firstpage from "@/app/components/Firstpage";
+import Firstpage from "@/app/(components)/Firstpage";
 
 
 
