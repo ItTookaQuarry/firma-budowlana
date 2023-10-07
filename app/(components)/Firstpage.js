@@ -11,8 +11,8 @@ export default function Firstpage() {
     <>
 
 
-<div class="hidden lg:grid md:grid  h-screen w-screen  grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500 bg-gradient-to-r from-stone-50 to-stone-950 px-10"
-style={{height:"90vh"}}
+<div class="hidden lg:grid md:grid h-auto w-auto  lg:h-screen lg:w-screen  grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500 bg-gradient-to-r from-stone-50 to-stone-950 px-10"
+
 >
 
 <Firstpagepopingimage/>
