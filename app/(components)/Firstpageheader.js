@@ -4,13 +4,13 @@ import React from 'react'
 export default function Firstpageheader() {
   return (
     <div
-    className=" col-span-full row-span-full m-auto relative max-w-lg text-center justify-center p-5 lg:p-10  rounded-lg relative z-20 lg:backdrop-brightness-50 md:backdrop-brightness-50 p-8"
+    className=" col-span-full row-span-full m-auto relative max-w-lg text-center justify-center p-5 lg:p-10  rounded-lg relative z-20  p-8"
     style={{
       display: "grid",
     }}
   >
     <br></br>
-    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl text-white relative col-span-full m-auto backdrop-brightness-50 lg:backdrop-brightness-100 
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl text-white relative col-span-full m-auto backdrop-brightness-50 lg:backdrop-brightness-50 
     md:backdrop-brightness-100
     
     rounded-lg">
