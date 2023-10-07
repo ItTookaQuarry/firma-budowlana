@@ -42,7 +42,7 @@ if(each.tags[0]==="0.5"){
 
 
 
-<div class={`col-span-12 ${columnsingrid} h-[300px]`} 
+<div class={`col-span-12 ${columnsingrid} h-[300px] `} 
 key={index}>
 <ImgComp 
 
@@ -65,7 +65,7 @@ height={each.height}
     <>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 4fr 1fr",}}>
         <div
-          className="max-x-[900px] lg:max-w-[1200px] gap-3 grid grid-cols-12 grid-rows-2 px-8 col-span-full
+          className=" lg:m-auto lg:max-w-[1200px] gap-3 grid grid-cols-12 grid-rows-2 px-8 col-span-full
           "
    
         >
