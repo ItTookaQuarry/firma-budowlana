@@ -8,7 +8,7 @@ import Image from "next/image";
 import { image } from "@nextui-org/theme";
 export default async function page() {
  const results = await cloudinary.v2.search
- .expression('	folder=mikrocement')
+ .expression('folder=mikrocement',"resource_type:image")
  .with_field('tags')
  .max_results(50)
  .execute()
@@ -72,48 +72,7 @@ height={each.height}
 
 
 {images}
-
-
-
-      {/* {table.map((each,index)=>{
-        if(each.span===1){
-          return (<div class="col-span-12 sm:col-span-4 h-[300px]" key={index}>
-          <Image
-            removeWrapper
-            alt="Card background"
-            className="z-0 w-full h-full object-cover rounded-lg"
-            src={zdjecie1}
-          />
-        </div>)
-        }
-        if(each.span===2){
-          return (    <div  class="w-full h-[300px] col-span-12 sm:col-span-8" key={index} >
- 
-    
-        </div>)
-        }
-        if(each.span===3){
-          return (    <div  class="w-full h-[300px] col-span-12 sm:col-span-12 rounded-lg" key={index}>
- 
-          <Image
-            removeWrapper
-            alt="Relaxing app background"
-            class="z-0 w-full h-full object-cover rounded-lg"
-            src={zdjecie1}
-            style={{margin:"auto"}}
-          />
-    
-        </div>)
-        }
-      })} */}
-      
-
-
-
-
-
-
-        </div>
+  </div>
       </div>
 
      
