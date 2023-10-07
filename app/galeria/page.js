@@ -50,7 +50,6 @@ width={each.width}
 height={each.height}
 
 />
-<div>{each.tags[0]}</div>
 </div>
 
 
