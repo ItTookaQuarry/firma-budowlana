@@ -29,10 +29,20 @@ export default function Aboutus() {
      
       </div>
 
-      <div class="grid   lg:hidden  md:hidden grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500 bg-gradient-to-r from-zinc-100 to-zinc-900 ">
+      <div class="grid  h-screen w-screen lg:hidden  md:hidden grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500 bg-gradient-to-r from-zinc-100 to-zinc-900 ">
 
-          <ImgComp2 src={"building-2762318_1280_ehrxmm"} />
- 
+      <ImgComp
+          src={"IMG-20230914-WA0142_1_twbfne"}
+          class={
+            "object-cover lg:hidden md:hidden h-full w-full absolute object-left"
+            
+          }
+
+          width={"2300"} 
+          height="1040"
+       
+          
+        />
         
    <Opis/>
      

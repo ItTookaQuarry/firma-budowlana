@@ -19,7 +19,7 @@ export default function Naw() {
   const [{ x, y }, scrollTo] = useWindowScroll();
 
 
-const navbgone= "text-xl  lg:bg-gradient-to-r from-stone-50 to-stone-950 md:bg-gradient-to-r"
+const navbgone= "text-xl  bg-black"
 const navbgtwo= "text-xl"
 const classone="lg:text-xl text-lg text-white m-auto  lg:px-5 lg:py-3 md:px-5  md:py-3 text-base font-medium text-center  bg-black text-white rounded-lg lg:hover:bg-white lg:hover:text-black focus:ring-4 focus:ring-black relative"
 const classtwo= "text-xl text-white  "

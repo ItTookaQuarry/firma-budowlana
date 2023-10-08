@@ -10,8 +10,8 @@ export default function Firstpageheader() {
     }}
   >
     <br></br>
-    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl text-white relative col-span-full m-auto backdrop-brightness-50 lg:backdrop-brightness-50 
-    md:backdrop-brightness-100
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight  md:text-5xl lg:text-6xl text-white relative col-span-full m-auto lg:backdrop-brightness-50  
+    backdrop-brightness-50
     
     rounded-lg">
       {" "}

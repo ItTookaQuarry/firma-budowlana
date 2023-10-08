@@ -6,7 +6,7 @@ import ImgComp from "@/app/(components)/Imagewithoutbackgroud";
 
 
 
-export default function Firstpagepopingimage() {
+export default function Firstpagepopingimage(props) {
 
 
 
@@ -15,7 +15,8 @@ export default function Firstpagepopingimage() {
   
   
   
-  <ImgComp src={"building-2762318_1280_ehrxmm"} />
+  <ImgComp src={props.source}
+  clasnn={" ml-30 absolute h-full z-20   object-cover " } />
 
   
   

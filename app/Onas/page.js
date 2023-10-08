@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
-
+import { CldImage } from 'next-cloudinary';
 import ImgComp from "@/app/(components)/Imagecomponent";
 import Balancer from "react-wrap-balancer";
 import ImgComp2 from "@/app/(components)/Imagewithoutbackgroud";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { motion, useAnimation } from "framer-motion";
 import { InView, useInView } from "react-intersection-observer";
-
+import ImgComp3 from "@/app/(components)/Imageaboutus";
+import Firstpagepopingimage from "../(components)/Firstpagepopingimage";
 export default function Page() {
   const [ref, inView] = useInView();
   const [ref2, inView2] = useInView();
@@ -72,21 +73,38 @@ export default function Page() {
     "Ciągłe śledzenie najnowszych trendów w branży.",
   ];
 
-  return (
-    <div class="gap-x-5 gap-y-5 grid grid-cols-4 relative lg:gap-y-10 lg:gap-x-10 backdrop-brightness-50">
+  return (<>
+    <div class=" h-auto gap-x-5 gap-y-5 grid grid-cols-4 relative lg:gap-y-10 lg:gap-x-10 backdrop-brightness-50 lg:h-screen">
   
 
+
+    <Firstpagepopingimage source={"building-2762318_1280_ehrxmm"}/>
+  <ImgComp3
+          src={"mikrocement/IMG-20230914-WA0090_ambwya"}
+          class={
+            " h-full w-screen lg:h-screen absolute lg:block md:block object-cover position-left object-left"
+          }
+          width={"2600"}
+          height="1200"
+          gravity={"north_west"}
+        />
+
       <br></br>
-      <div class="col-span-full lg:col-start-1 lg:col-span-2 m-auto backdrop-brightness-50">
+      <div class="col-span-full lg:col-start-1 lg:col-span-2 m-auto backdrop-brightness-50 relative z-20" >
         <h1
           class={`${title2}  col-start-1 col-span-4 m-auto font-bold
-mb-4 text-4xl relative backdrop-brightness-50`}
+mb-4 text-4xl relative backdrop-brightness-50 ` }
         >
           Logo
         </h1>
       </div>
 
-      <div class="col-span-full  lg:col-start-2 lg:col-span-2   pl-10 relative backdrop-brightness-50 w-5/6">
+
+
+
+
+
+      <div class="col-span-full  lg:col-start-2 lg:col-span-2  p-10 relative backdrop-brightness-50 w-5/6 z-30 text-xl">
         <h1 style={{ color: "white", fontWeight: "bold" }}>
           To firma która istnieje na rynku już od 2015 roku. Współpracowaliśmy z
           najlepszymi architektami w Londynie. Zrealizowaliśmy wiele projektów
@@ -95,47 +113,14 @@ mb-4 text-4xl relative backdrop-brightness-50`}
         </h1>
       </div>
 
-      <div
+      {/* <div
         class={` col-span-full pl-4 
 mb-4 text-4xl  font-bold  lg:m-auto  ${title2}`}
       >
         Dlaczego my?
-      </div>
+      </div> */}
 
-      {tableofreasons.map((each, index) => {
-        const classs = (index + 1) % 2 == 0 ? div2clas : div1clas;
-
-        return (
-          <motion.div
-            initial="hidden"
-            animate={controls[index]}
-            variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0 },
-            }}
-            class={`${classs} "bg-white relative w-[250px] m-auto  text-gray-800 font-semibold py-2 px-4 border  border-solid rounded shadow "`}
-            key={index}
-          >
-            {" "}
-            <p
-              class="m-auto text-white text-center justify-center "
-              ref={refs[index]}
-            >
-              {" "}
-              {each}
-            </p>
-            <AiFillCheckCircle class="m-auto text-6xl text-white" />
-          </motion.div>
-        );
-      })}
-
-      <br></br>
-      <div
-        class={` col-span-full pl-4 
-mb-4 text-4xl m-auto font-bold  lg:m-auto  ${title2}`}
-      >
-        O nas
-      </div>
+    
 
       {/* <div class=" col-span-full    relative backdrop-brightness-50 ">
         <h1 style={{ color: "white", fontWeight: "bold" }}>
@@ -167,6 +152,54 @@ mb-4 text-4xl m-auto font-bold  lg:m-auto  ${title2}`}
           </Balancer>
         </h1>
       </div> */}
+
     </div>
+    {/* <ImgComp3
+          src={"mikrocement/IMG-20230914-WA0090_ambwya"}
+          class={
+            " lg:h-screen  lg:w-screen lg:h-screen absolute lg:block md:block z-1"
+          }
+          width={"2600"}
+          height="1200"
+          gravity={"north_west"}
+        />
+   */}
+{/* <br></br>
+{tableofreasons.map((each, index) => {
+        const classs = (index + 1) % 2 == 0 ? div2clas : div1clas;
+
+        return (
+          <motion.div
+            initial="hidden"
+            animate={controls[index]}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+            class={`${classs} "bg-white relative w-[250px] m-auto  text-gray-800 font-semibold py-2 px-4 border  border-solid rounded shadow z-30"`}
+            key={index}
+          >
+            {" "}
+            <p
+              class="m-auto text-white text-center justify-center "
+              ref={refs[index]}
+            >
+              {" "}
+              {each}
+            </p>
+            <AiFillCheckCircle class="m-auto text-6xl text-white" />
+          </motion.div>
+        );
+      })}
+
+      <br></br>
+      <div
+        class={` col-span-full pl-4 
+mb-4 text-4xl m-auto font-bold  lg:m-auto  ${title2}`}
+      >
+        O nas
+      </div> */}
+    </>
+    
   );
 }
