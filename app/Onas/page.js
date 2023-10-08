@@ -1,12 +1,12 @@
-"use client";
+
 import React from "react";
-import { CldImage } from "next-cloudinary";
+
 import ImgComp from "@/app/(components)/Imagecomponent";
 import Balancer from "react-wrap-balancer";
 import ImgComp2 from "@/app/(components)/Imagewithoutbackgroud";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { motion, useAnimation } from "framer-motion";
-import { InView, useInView } from "react-intersection-observer";
+
+
 import ImgComp3 from "@/app/(components)/Imageaboutus";
 import Firstpagepopingimage from "../(components)/Firstpagepopingimage";
 export default function Page() {
@@ -145,7 +145,7 @@ mb-4 text-4xl m-auto font-bold  lg:m-auto  ${title2}`}
         O nas
       </div> */}
       <br></br>
-      <div className="grid h-auto w-auto w-screen grid-cols-6 gap-y-2.5">
+      {/* <div className="grid h-auto w-auto w-screen grid-cols-6 gap-y-2.5">
         <div class="grid h-[300px] w-[300px] rounded-full col-span-full m-auto lg:col-start-1 lg:col-span-2 lg:h-[400px] lg:w-[400px]">
           <p class="m-auto text-white text-center justify-center col-span-full row-span-full z-20 p-10">
             {" "}
@@ -175,7 +175,7 @@ mb-4 text-4xl m-auto font-bold  lg:m-auto  ${title2}`}
             class=" bg-brightness-100 h-full w-full rounded-full col-span-full row-span-full z-10"
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
