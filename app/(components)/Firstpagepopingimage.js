@@ -16,7 +16,7 @@ export default function Firstpagepopingimage(props) {
   
   
   <ImgComp src={props.source}
-  clasnn={" ml-30 absolute h-full z-20   object-cover " } />
+  clasnn={" absolute h-full z-20  col-start-1 object-cover" } />
 
   
   

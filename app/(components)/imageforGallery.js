@@ -12,7 +12,9 @@ export default function imageforGallery(props) {
       class="z-0 w-full h-full object-cover rounded-lg"
     
        
-
+      sizes="(max-width: 768px) 100vw,
+      (max-width: 1200px) 50vw,
+      33vw"
       
       />
   )

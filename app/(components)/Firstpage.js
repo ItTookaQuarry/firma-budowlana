@@ -12,8 +12,8 @@ export default function Firstpage() {
     <>
 
 
-<div class="grid  h-screen w-screen  grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500 bg-gradient-to-r from-stone-950  to-stone-50 px-10"
-
+<div class="grid  h-screen w-screen  grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500  "
+style={{height:"90vh"}}
 >
 
 <Firstpagepopingimage source={"building-2762342_1280_pc4ocj"}/>
@@ -24,6 +24,7 @@ export default function Firstpage() {
           class={
             "object-cover lg: h-full  lg:w-full lg:h-full absolute lg:block md:block "
           }
+        
           width={"2600"}
           height="1200"
           gravity={"east"}
