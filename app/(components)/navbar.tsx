@@ -16,21 +16,10 @@ import {
 
 export default function Naw() {
 
-  const [{ x, y }, scrollTo] = useWindowScroll();
+  
 
-
-const navbgone= "text-xl  bg-black"
-const navbgtwo= "text-xl"
-const classone="lg:text-xl text-lg text-white m-auto  lg:px-5 lg:py-3 md:px-5  md:py-3 text-base font-medium text-center  bg-black text-white rounded-lg lg:hover:bg-white lg:hover:text-black focus:ring-4 focus:ring-black relative"
-const classtwo= "text-xl text-white  "
-const pathname = usePathname()
-let  navclass= pathname === "/" ? navbgone : navbgtwo
-
-navclass = y===0 ? navclass : "text-lg bg-transparent backdrop-brightness-50 text-white"
-
-const navelementclass = navclass !== navbgone ? classtwo : classone
-
-const nazwafirmy = navclass === navbgone ? "text-xl text-white m-auto  px-5 py-3 text-base font-medium text-center  bg-black text-white rounded-lg  relative" : classtwo
+const nazwafirmy="text-xl"
+const navelementclass="lg:text-xl "
 
 
 
@@ -53,7 +42,7 @@ const nazwafirmy = navclass === navbgone ? "text-xl text-white m-auto  px-5 py-3
   return (
 
     <Navbar
-className={navclass}
+
 
     disableAnimation={true}
       onMenuOpenChange={setIsMenuOpen}

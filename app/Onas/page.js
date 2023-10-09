@@ -1,10 +1,7 @@
 
 import React from "react";
 
-import ImgComp from "@/app/(components)/Imagecomponent";
-import Balancer from "react-wrap-balancer";
-import ImgComp2 from "@/app/(components)/Imagewithoutbackgroud";
-import { AiFillCheckCircle } from "react-icons/ai";
+
 
 
 import ImgComp3 from "@/app/(components)/Imageaboutus";
@@ -35,7 +32,7 @@ export default function Page() {
         <ImgComp3
           src={"mikrocement/IMG-20230914-WA0090_ambwya"}
           class={
-            " h-full w-screen lg:h-screen absolute lg:block md:block object-cover position-left object-left"
+            " h-full w-screen lg:h-screen absolute lg:block md:block  position-left object-left"
           }
           width={"2600"}
           height="1200"
