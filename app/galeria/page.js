@@ -1,10 +1,8 @@
 import React from "react";
-import zdjecie1 from "public/zdjecie1.jpg";
 import cloudinary from "cloudinary";
 import { v2 } from "cloudinary";
 import ImgComp from "@/app/(components)/imageforGallery";
-import Image from "next/image";
-import { image } from "@nextui-org/theme";
+
 export default async function page() {
   const results = await cloudinary.v2.search
     .expression("folder=mikrocement", "resource_type:image")

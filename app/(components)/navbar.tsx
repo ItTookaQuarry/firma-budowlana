@@ -86,6 +86,8 @@ style={{width:"100vw"}}
         <br></br>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`} >
+
+            <div className="border-neutral-500 border-b-2 ">
             <Link
               href={item.Link}
               style={{ fontSize: "2.3em",}}
@@ -95,7 +97,7 @@ style={{width:"100vw"}}
             >
               {item.name}
             </Link>
-            
+            </div>
           </NavbarMenuItem>
         ))}
 
