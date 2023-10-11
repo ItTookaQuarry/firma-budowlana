@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-import {CircularProgress} from "@nextui-org/react";
+import {CircularProgress} from "@nextui-org/progress";
 
 export default function Loading() {
   return (
