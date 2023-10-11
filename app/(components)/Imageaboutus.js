@@ -9,7 +9,7 @@ export default function Imageaboutus(props) {
     class={props.class}
     src={props.src}
     fillBackground={{gravity:`${props.gravity}`}}
-
+    loading="lazy"
     alt="Zdjęcie z budowy"
     />
   ) 
