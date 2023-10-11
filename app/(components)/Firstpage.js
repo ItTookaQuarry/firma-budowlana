@@ -12,11 +12,11 @@ export default function Firstpage() {
     <>
 
 
-<div class="grid  h-screen w-screen  grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500  "
-style={{height:"90vh"}}
+<div class="grid h-auto w-auto lg:h-screen lg:w-screen  grid-cols-4 gap-y-1   relative border-b-2 border-neutral-500  "
+
 >
 
-<Firstpagepopingimage source={"building-2762342_1280_pc4ocj"}/>
+<Firstpagepopingimage source={"building-2762318_1280_ehrxmm"}/>
 
 
 <ImgComp3
